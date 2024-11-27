@@ -1,0 +1,21 @@
+meta {
+  name: Create an address
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/addresses
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "street":"Street one",
+    "city":"City one",
+    "state":"Some state",
+    "zipCode": "12323232",
+    "country":"USA"
+  }
+}
