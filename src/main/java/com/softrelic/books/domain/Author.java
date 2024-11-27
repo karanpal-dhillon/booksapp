@@ -2,6 +2,7 @@ package com.softrelic.books.domain;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -16,7 +17,7 @@ public class Author {
     private Address address;
 
     @ManyToMany(mappedBy = "authors")
-    private List<Book> books;
+    private List<Book> books = new ArrayList<>();
 
     public Long getId() {
         return id;

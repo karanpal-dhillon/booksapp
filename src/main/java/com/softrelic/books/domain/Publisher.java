@@ -2,6 +2,7 @@ package com.softrelic.books.domain;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -16,7 +17,7 @@ public class Publisher {
     private Address address;
 
     @OneToMany(mappedBy = "publisher")
-    private Set<Book> books;
+    private Set<Book> books = new HashSet<>();
 
     public Long getId() {
         return id;

@@ -2,6 +2,7 @@ package com.softrelic.books.domain;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class Book {
     private Publisher publisher;
 
     @ManyToMany()
-    private List<Author> authors;
+    private List<Author> authors = new ArrayList<>();
 
     public long getId() {
         return id;
@@ -67,5 +68,13 @@ public class Book {
 
     public void setPublisher(Publisher publisher) {
         this.publisher = publisher;
+    }
+
+    public List<Author> getAuthors() {
+        return authors;
+    }
+
+    public void setAuthors(List<Author> authors) {
+        this.authors = authors;
     }
 }
