@@ -15,6 +15,8 @@ public class Book {
     private String isbn;
     private int price;
     private Date publishDate;
+    private Date createdAt;
+    private Date updatedAt;
 
     @ManyToOne()
     private Publisher publisher;
@@ -76,5 +78,21 @@ public class Book {
 
     public void setAuthors(List<Author> authors) {
         this.authors = authors;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

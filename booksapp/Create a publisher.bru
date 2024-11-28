@@ -1,0 +1,26 @@
+meta {
+  name: Create a publisher
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/publishers
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name":"example publihsher",
+    "email":"example@example.com",
+    "contact":"8989898889",
+    "address":{
+      "street":"Street one",
+      "city":"City one",
+      "state":"Some state",
+      "zipCode": "12323232",
+      "country":"USA"
+    }
+  }
+}

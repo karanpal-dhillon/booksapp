@@ -2,6 +2,8 @@ package com.softrelic.books.domain;
 
 import jakarta.persistence.*;
 
+import java.util.Date;
+
 @Entity
 public class Address {
     @Id
@@ -12,6 +14,8 @@ public class Address {
     private String state;
     private String zipCode;
     private String country;
+    private Date createdAt;
+    private Date updatedAt;
 
     public Long getId() {
         return id;
@@ -59,5 +63,21 @@ public class Address {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }
