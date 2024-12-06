@@ -17,6 +17,8 @@ public class PublisherService {
        this.addressRepository = addressRepository;
     }
    public Publisher create(PublisherDTO publisherDTO){
+        // Address does not have any foreign key so we save address first.
+       // Saved addresss is used in the publisher to create a foreign key relationship
        Address address = new Address();
        address.setStreet(publisherDTO.getAddress().getStreet());
        address.setCity(publisherDTO.getAddress().getCity());

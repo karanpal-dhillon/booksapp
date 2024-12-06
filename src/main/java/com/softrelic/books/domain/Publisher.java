@@ -2,6 +2,7 @@ package com.softrelic.books.domain;
 
 import jakarta.persistence.*;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,6 +14,8 @@ public class Publisher {
     private String name;
     private String email;
     private String contact;
+    private Date updatedAt;
+    private Date createdAt;
     @OneToOne
     private Address address;
 
